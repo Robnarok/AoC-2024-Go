@@ -31,6 +31,38 @@ func First(input []string) {
 	fmt.Printf("Sum off differences: %v", sum)
 }
 
+func Second(input []string) {
+	var lefts []int
+	var rights []int
+	for _, line := range input {
+		left, right, err := readValues(line)
+		if err != nil {
+			log.Fatal(err)
+		}
+		lefts = append(lefts, left)
+		rights = append(rights, right)
+	}
+	var simmilarities []int
+	for i := range input {
+		simmilarities = append(simmilarities, getSimilarity(lefts[i], rights))
+	}
+	sum := 0
+	for i, v := range simmilarities {
+		sum += lefts[i] * v
+	}
+	fmt.Printf("Sum off all simmilarities: %v", sum)
+}
+
+func getSimilarity(left int, rights []int) int {
+	simmilarity := 0
+	for _, v := range rights {
+		if v == left {
+			simmilarity++
+		}
+	}
+	return simmilarity
+}
+
 func sortNumbers(lefts, rights []int) ([]int, []int) {
 	sort.Ints(lefts)
 	sort.Ints(rights)

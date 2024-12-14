@@ -60,3 +60,16 @@ func TestGetDifference(t *testing.T) {
 		t.Errorf("missmatch of difference, Want: %d, got %d", want, got)
 	}
 }
+
+// Still not to complicated - but i try to get the habbit of writing unitests :)
+func TestGetSimmilarities(t *testing.T) {
+	left := 3
+	rights := []int{1, 2, 3, 3, 3}
+	want := 3
+
+	got := getSimilarity(left, rights)
+
+	if got != want {
+		t.Errorf("missmatch of similarity, Want: %d, got %d", want, got)
+	}
+}

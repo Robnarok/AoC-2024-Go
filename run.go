@@ -10,8 +10,9 @@ import (
 func Run(day int) {
 	if day == 1 {
 		input := helper.Parse("input/1.txt")
-		log.Print("Day 1: Part One")
+		log.Println("Day 1: Part One")
 		one.First(input)
-		log.Print("Day 1: Part Two")
+		log.Println("Day 1: Part Two")
+		one.Second(input)
 	}
 }
