@@ -7,21 +7,21 @@ import (
 )
 
 func TestParseLength(t *testing.T) {
-	filename := "test-1.txt"
+	filename := "test-1"
 	content := helper.Parse(filename)
 	want := []string{"1", "2", "3"}
 	if len(content) != len(want) {
-		t.Fatalf("helper.Parse(\"test-1.txt\").len() != %d, got %d", len(want), len(content))
+		t.Fatalf("helper.Parse(\"test-1\").len() != %d, got %d", len(want), len(content))
 	}
 }
 
 func TestParseContent(t *testing.T) {
-	filename := "test-1.txt"
+	filename := "test-1"
 	content := helper.Parse(filename)
 
 	want := []string{"1", "2", "3"}
 	if len(content) != len(want) {
-		t.Fatalf("helper.Parse(\"test-1.txt\").len() != %d, got %d", len(want), len(content))
+		t.Fatalf("helper.Parse(\"test-1\").len() != %d, got %d", len(want), len(content))
 	}
 	for i := range content {
 		if want[i] != content[i] {
