@@ -1,9 +1,11 @@
 package aoc2024go
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/Robnarok/AoC-2024-Go/days/one"
+	"github.com/Robnarok/AoC-2024-Go/days/two"
 	"github.com/Robnarok/AoC-2024-Go/helper"
 )
 
@@ -14,5 +16,12 @@ func Run(day int) {
 		one.First(input)
 		log.Println("Day 1: Part Two")
 		one.Second(input)
+	}
+	if day == 2 {
+		input := helper.Parse("input/2.txt")
+		log.Println("Day 2: Part One")
+		fmt.Println(two.First(input))
+		log.Println("Day 2: Part Two")
+		fmt.Println(two.Second(input))
 	}
 }
