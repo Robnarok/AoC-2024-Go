@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"os"
+	"strconv"
+
+	aoc2024go "github.com/Robnarok/AoC-2024-Go"
+)
 
 func main() {
-	fmt.Println("Howdy World!")
+	i, err := strconv.Atoi(os.Args[1])
+	if err != nil {
+		return
+	}
+
+	aoc2024go.Run(i)
 }

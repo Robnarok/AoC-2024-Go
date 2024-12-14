@@ -7,7 +7,7 @@ import (
 )
 
 func Parse(filename string) []string {
-	file, err := os.Open("../input/" + filename + ".txt")
+	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
 	}

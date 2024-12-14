@@ -7,7 +7,7 @@ import (
 )
 
 func TestParseLength(t *testing.T) {
-	filename := "test-1"
+	filename := "../input/test-1.txt"
 	content := helper.Parse(filename)
 	want := []string{"1", "2", "3"}
 	if len(content) != len(want) {
@@ -16,7 +16,7 @@ func TestParseLength(t *testing.T) {
 }
 
 func TestParseContent(t *testing.T) {
-	filename := "test-1"
+	filename := "../input/test-1.txt"
 	content := helper.Parse(filename)
 
 	want := []string{"1", "2", "3"}
